@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker buildx build \
+    --file $DOCKERFILE_PATH \
+    --platform linux/amd64,linux/386,linux/arm64,linux/arm/v7 \
+    --progress plain \
+    --push \
+    --tag $IMAGE_NAME \
+    .
+
